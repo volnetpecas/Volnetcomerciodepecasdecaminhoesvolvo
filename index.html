@@ -1,0 +1,260 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volnet Comércio de Peças para Caminhões Volvo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        volnetPrimary: '#3182ce',   /* Azul corporativo suave */
+                        volnetDark: '#2d3748',      /* Cinza escuro azulado (mais leve que preto) */
+                        volnetAccent: '#f6ad55',    /* Laranja suave / pêssego para botões */
+                        volnetGray: '#f7fafc',      /* Fundo muito claro e suave */
+                        volnetText: '#4a5568'       /* Texto cinza médio (reduz o contraste excessivo) */
+                    },
+                    backgroundImage: {
+                        'hero-pattern': 'linear-gradient(to right bottom, #ebf8ff, #f7fafc, #ffffff)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-volnetGray text-volnetText font-sans antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-volnetPrimary text-white text-xs sm:text-sm py-2 px-4 border-b-4 border-volnetAccent">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-blue-100">
+                <span><i class="fa-solid fa-file-invoice text-volnetAccent mr-1"></i> CNPJ: 16.569.461/0001-10</span>
+                <span><i class="fa-solid fa-shield-halved text-volnetAccent mr-1"></i> Peças Genuínas e Linha Pesada Volvo</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5511920120137" target="_blank" class="hover:text-volnetAccent transition font-bold text-white flex items-center">
+                    <i class="fa-brands fa-whatsapp text-green-400 mr-1 text-base"></i> (11) 92012-0137
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-volnetPrimary text-white font-black text-2xl px-3 py-1 rounded-lg tracking-wider shadow-sm">
+                    VOL<span class="text-volnetAccent">NET</span>
+                </div>
+                <div class="hidden sm:block text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">
+                    Comércio de Peças <br><span class="text-volnetPrimary">para Caminhões Volvo</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-semibold text-volnetText uppercase text-sm tracking-wide">
+                <a href="#inicio" class="hover:text-volnetPrimary transition">Início</a>
+                <a href="#produtos" class="hover:text-volnetPrimary transition">Catálogo</a>
+                <a href="#sobre" class="hover:text-volnetPrimary transition">A Empresa</a>
+                <a href="#contato" class="hover:text-volnetPrimary transition">Contato</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button onclick="toggleCart()" class="relative bg-white border-2 border-volnetPrimary text-volnetPrimary px-5 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-50 transition shadow-sm font-bold uppercase text-sm tracking-wide">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="hidden sm:inline">Orçamento</span>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-volnetAccent text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-sm">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (Tons Suaves e Claros) -->
+    <section id="inicio" class="bg-hero-pattern text-volnetDark py-24 px-4 overflow-hidden relative border-b border-blue-50">
+        <!-- Elementos geométricos de fundo suaves -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100 opacity-40 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-orange-100 opacity-40 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-blue-100 text-volnetPrimary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Distribuidor Especializado</span>
+                <h1 class="text-4xl sm:text-5xl font-black mt-5 mb-6 leading-tight tracking-tight text-volnetDark">
+                    Catálogo Técnico de Peças <span class="text-volnetPrimary block mt-2">Volvo Trucks</span>
+                </h1>
+                <p class="text-volnetText text-base sm:text-lg mb-8 leading-relaxed max-w-lg">
+                    Acesso rápido a componentes originais e de reposição para linha pesada. Módulos, válvulas, suspensão e motorização com pronta entrega para todo o Brasil.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#produtos" class="bg-volnetPrimary text-white hover:bg-blue-700 font-bold px-8 py-3.5 rounded-lg shadow-md transition flex items-center gap-2 uppercase text-sm tracking-wide">
+                        <i class="fa-solid fa-list text-white"></i> Acessar Catálogo
+                    </a>
+                    <a href="https://wa.me/5511920120137?text=Olá!%20Preciso%20de%20um%20orçamento%20de%20peças%20para%20Volvo." target="_blank" class="bg-white border border-green-200 text-green-600 hover:bg-green-50 hover:border-green-300 font-bold px-8 py-3.5 rounded-lg shadow-sm transition flex items-center gap-2 uppercase text-sm tracking-wide">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Orçamento Rápido
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Box de Cotação Rápida (Suave) -->
+            <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-xl relative">
+                <div class="absolute -top-4 -right-4 bg-volnetAccent text-white w-12 h-12 rounded-xl flex items-center justify-center text-xl shadow-md transform rotate-3">
+                    <i class="fa-solid fa-stopwatch"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 text-volnetDark tracking-wide border-b border-gray-100 pb-3">Cotação por Chassi</h3>
+                <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+                    Não encontrou a peça no site? Envie os últimos 8 dígitos do chassi do seu caminhão Volvo e nós identificamos a peça exata no sistema.
+                </p>
+                <div class="bg-blue-50 text-volnetDark p-5 rounded-xl border border-blue-100">
+                    <p class="text-xs text-volnetPrimary uppercase font-bold tracking-wider">Canal de Vendas Oficial</p>
+                    <p class="text-3xl font-black mt-1 tracking-tighter text-volnetDark"><i class="fa-brands fa-whatsapp text-green-500 mr-2 text-2xl"></i>(11) 92012-0137</p>
+                    <a href="https://wa.me/5511920120137?text=Olá,%20gostaria%20de%20fazer%20uma%20cotação%20pelo%20chassi." target="_blank" class="mt-4 block text-center bg-volnetPrimary hover:bg-blue-700 text-white text-sm font-bold py-3 rounded-lg shadow-sm transition uppercase tracking-wide">
+                        Enviar Chassi Agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="py-20 px-4 bg-white min-h-screen">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 border-b border-gray-100 pb-6">
+                <div>
+                    <h2 class="text-3xl font-black text-volnetDark tracking-tight">Catálogo de Peças</h2>
+                    <p class="text-gray-400 mt-2 font-medium uppercase tracking-widest text-xs">Linha Volvo FH, FM, VM, NH</p>
+                </div>
+                <div class="mt-4 md:mt-0 text-sm bg-blue-50 px-4 py-2 rounded-full text-volnetPrimary font-bold">
+                    <i class="fa-solid fa-boxes-stacked mr-2"></i> Exibindo 12 produtos
+                </div>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-grid">
+                
+                <!-- Produto 1 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 flex flex-col h-full relative group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-50 text-gray-500 border border-gray-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Eixo / Cubo</span>
+                            <i class="fa-solid fa-circle text-green-400 text-xs mt-1" title="Em Estoque"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-volnetDark leading-tight group-hover:text-volnetPrimary transition">Cubo de Roda Traseira</h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Alta resistência para eixos pesados Volvo. Aplicação FH/FM.</p>
+                        <p class="text-xs text-gray-400 mt-3 font-mono bg-gray-50 inline-block px-2 py-1 rounded border border-gray-100">Ref: VL-89230</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-50">
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-sm text-gray-400 font-bold">R$</span>
+                            <span class="text-2xl font-black text-volnetPrimary">1.850,00</span>
+                        </div>
+                        <button onclick="addToCart('Cubo de Roda Traseira', 1850.00)" class="w-full bg-blue-50 hover:bg-volnetPrimary hover:text-white text-volnetPrimary font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm tracking-wide">
+                            <i class="fa-solid fa-plus"></i> Adicionar ao Orçamento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 flex flex-col h-full relative group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-50 text-gray-500 border border-gray-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Freio / Pneumática</span>
+                            <i class="fa-solid fa-circle text-green-400 text-xs mt-1" title="Em Estoque"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-volnetDark leading-tight group-hover:text-volnetPrimary transition">Válvula Freio de Motor</h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Controle pneumático de alta precisão. Sistema de freio auxiliar.</p>
+                        <p class="text-xs text-gray-400 mt-3 font-mono bg-gray-50 inline-block px-2 py-1 rounded border border-gray-100">Ref: VL-44120</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-50">
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-sm text-gray-400 font-bold">R$</span>
+                            <span class="text-2xl font-black text-volnetPrimary">690,00</span>
+                        </div>
+                        <button onclick="addToCart('Válvula Freio de Motor', 690.00)" class="w-full bg-blue-50 hover:bg-volnetPrimary hover:text-white text-volnetPrimary font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm tracking-wide">
+                            <i class="fa-solid fa-plus"></i> Adicionar ao Orçamento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 flex flex-col h-full relative group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-50 text-gray-500 border border-gray-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Emissão / Arla</span>
+                            <i class="fa-solid fa-circle text-green-400 text-xs mt-1" title="Em Estoque"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-volnetDark leading-tight group-hover:text-volnetPrimary transition">Bomba Arla (Dosadora)</h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Unidade dosadora compatível com motores Euro 5 e Euro 6.</p>
+                        <p class="text-xs text-gray-400 mt-3 font-mono bg-gray-50 inline-block px-2 py-1 rounded border border-gray-100">Ref: VL-AR550</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-50">
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-sm text-gray-400 font-bold">R$</span>
+                            <span class="text-2xl font-black text-volnetPrimary">3.400,00</span>
+                        </div>
+                        <button onclick="addToCart('Bomba Arla', 3400.00)" class="w-full bg-blue-50 hover:bg-volnetPrimary hover:text-white text-volnetPrimary font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm tracking-wide">
+                            <i class="fa-solid fa-plus"></i> Adicionar ao Orçamento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 flex flex-col h-full relative group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-50 text-gray-500 border border-gray-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Cabine / Suspensão</span>
+                            <i class="fa-solid fa-circle text-green-400 text-xs mt-1" title="Em Estoque"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-volnetDark leading-tight group-hover:text-volnetPrimary transition">Amortecedor Traseiro Cabine FH</h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Conforto e estabilidade superior para suspensão da cabine linha FH.</p>
+                        <p class="text-xs text-gray-400 mt-3 font-mono bg-gray-50 inline-block px-2 py-1 rounded border border-gray-100">Ref: VL-CB102</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-50">
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-sm text-gray-400 font-bold">R$</span>
+                            <span class="text-2xl font-black text-volnetPrimary">480,00</span>
+                        </div>
+                        <button onclick="addToCart('Amortecedor Traseiro Cabine FH', 480.00)" class="w-full bg-blue-50 hover:bg-volnetPrimary hover:text-white text-volnetPrimary font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm tracking-wide">
+                            <i class="fa-solid fa-plus"></i> Adicionar ao Orçamento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 flex flex-col h-full relative group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-50 text-gray-500 border border-gray-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Transmissão</span>
+                            <i class="fa-solid fa-circle text-green-400 text-xs mt-1" title="Em Estoque"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-volnetDark leading-tight group-hover:text-volnetPrimary transition">Kit Embreagem Volvo FH I-Shift</h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Platô e disco. Câmbio automatizado. Padrão original.</p>
+                        <p class="text-xs text-gray-400 mt-3 font-mono bg-gray-50 inline-block px-2 py-1 rounded border border-gray-100">Ref: VL-TR700</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-50">
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-sm text-gray-400 font-bold">R$</span>
+                            <span class="text-2xl font-black text-volnetPrimary">4.200,00</span>
+                        </div>
+                        <button onclick="addToCart('Kit Embreagem Volvo FH I-Shift', 4200.00)" class="w-full bg-blue-50 hover:bg-volnetPrimary hover:text-white text-volnetPrimary font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm tracking-wide">
+                            <i class="fa-solid fa-plus"></i> Adicionar ao Orçamento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition p-6 border border-gray-100 flex flex-col h-full relative group">
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-50 text-gray-500 border border-gray-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Eletrônica</span>
+                            <i class="fa-solid fa-circle text-green-400 text-xs mt-1" title="Em Estoque"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-volnetDark leading-tight group-hover:text-volnetPrimary transition">Módulo do Motor (ECM)</h3>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Central eletrônica de controle do motor D13. Requer programação.</p>
+                        <p class="text-xs text-gray-400 mt-3 font-mono bg-gray-50 inline-block px-2 py-1 rounded border border-gray-100">Ref: VL-EL990</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-50">
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-sm text-gray-400 font-bold">R$</span>
+                            <span class="text-2xl font-black text-volnetPrimary">6.500,00</span>
+                        </div>
+                        <button onclick="addToCart('Módulo do Motor ECM', 6500.00)" class="w-f
